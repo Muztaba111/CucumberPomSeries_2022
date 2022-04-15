@@ -43,6 +43,8 @@ public class DriverFactory {
 		getDriver().manage().deleteAllCookies();
 		return getDriver();
 }
+	
+    
 	/*
 	 *  This is used to get the driver with Threadlocal 
 	 */

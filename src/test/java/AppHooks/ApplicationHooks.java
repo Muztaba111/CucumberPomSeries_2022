@@ -28,16 +28,26 @@ public class ApplicationHooks {
 		
 	}
 	
-	@Before (order = 1)
 	
+	
+	
+	/*
+	 * Below method will initialize the chrome browser and enter the URL of the application
+	 * 
+	 */
+	@Before (order = 1)
 	public void LaunchBrowser() {
 		
 		String browserName = prop.getProperty("browser");
+		String urlName = prop.getProperty("url");
 		
 		driverFactory = new DriverFactory();
 		driver = driverFactory.init_driver(browserName);
+		driver.get(urlName);
+		
 	
 	}
+ 
 	
 	@After(order = 0)
 	public void quitBrowser() {

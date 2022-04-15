@@ -25,7 +25,7 @@ public class AccountPageSteps {
 		String userName = credList.get(0).get("username");
 		String passWord= credList.get(0).get("password");
 		
-		DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=my-account");
+	//DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=my-account");
 		
 	
 		accountPage = loginPage.doLogin(userName, passWord);

@@ -20,13 +20,9 @@ public class LoginPageSteps {
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		
-		DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	//	DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");;
+		
+		
 	}
 
 	@When("user gets the title of the page")
