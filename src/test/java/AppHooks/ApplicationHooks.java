@@ -31,10 +31,7 @@ public class ApplicationHooks {
 	
 	
 	
-	/*
-	 * Below method will initialize the chrome browser and enter the URL of the application
-	 * 
-	 */
+	
 	@Before (order = 1)
 	public void LaunchBrowser() {
 		
@@ -54,14 +51,7 @@ public class ApplicationHooks {
 		driver.quit();
 	}
 	
-	@After(order = 1) 
-	public void tearDown(Scenario scenario) {
-		if(scenario.isFailed()) {
-			String screnShotName = scenario.getName().replaceAll(" ", "_");
-			byte[] sourcePath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);	
-			
-			scenario.attach(sourcePath,"image/png", screnShotName);
-		}
+	
 	}
 
-}
+

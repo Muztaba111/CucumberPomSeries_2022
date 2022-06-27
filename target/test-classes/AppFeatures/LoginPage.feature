@@ -1,21 +1,19 @@
 Feature: Login page feature
 
-Scenario: Login page title
-Given user is on login page
-When user gets the title of the page
-Then page title should be "Login - My Store"
 
-Scenario: Forgot password link
+Scenario: Login into Shopify and the product
 Given user is on login page
-Then forgot password link should be displayed
+When user enters username "chiraggupta@cedcommerce.com"
+Then user click on continue with email button
+And user enters passwprd "SeleniumTest"
+Then user click on login button
+When user click on the products link
+Then user click on Add product button
+And user enter title "T-shirt"
+And user enter product type "Apparel & Accessories"
+Then click on Save button
 
-Scenario: Login with correct credentials
-Given user is on login page
-When user enters username "muztaba5star@gmail.com"
-And user enters passwprd "Muztaba@111"
-And user click on login button
-Then user gets the title of the page
-And page title should be "My account - My Store"
+
 
 
 
